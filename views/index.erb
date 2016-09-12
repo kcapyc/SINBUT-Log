@@ -1,0 +1,6 @@
+<% @results.each do |post| %>
+	<div class="post">
+		<h3><a href="/post/<%= post['id'] %>"><%= post['title'] %></a> <small><%= post['created_date'] %></small></h3>
+		<p><%= post['content'] %></p>
+	</div>
+<% end %>

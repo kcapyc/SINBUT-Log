@@ -1,0 +1,18 @@
+<div class="post">
+	<h3><%= @row['title'] %> <small><%= @row['created_date'] %></small></h3>
+	<p><%= @row['content'] %></p>
+</div>
+
+<% @comments.each do |comment| %>
+	<blockquote>
+		<p class="lead"><%= comment['content'] %></p>
+		<footer><%= comment['created_date'] %></footer>        
+	</blockquote>
+<% end %>
+
+<form action="/post/<%= @row['id'] %>" method="POST" role="form">
+	<div class="form-group">
+		<textarea name="content" class="form-control" rows="6" placeholder="Написать комментарий"></textarea>
+	</div>
+	<button type="submit" class="btn btn-primary pull-right">Добавить комментарий</button>
+</form>

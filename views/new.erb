@@ -1,0 +1,15 @@
+<h3>Добавить новую запись</h3>
+
+<form action="/new" method="POST" role="form">
+
+	<div class="form-group">
+		<label>Заголовок записи</label>
+		<input name="title" type="text" class="form-control" placeholder="Введите заголовок" value="<%=@title%>">
+	</div>
+
+	<div class="form-group">
+		<textarea name="content" class="form-control" rows="8" placeholder="Введите текст"><%=@content%></textarea>
+	</div>
+
+	<button type="submit" class="btn btn-primary">Опубликовать</button>
+</form>
